@@ -1,0 +1,13 @@
+<h1>{{ title }}!</h1>
+<p i18n="site header|An introduction header for this sample">
+  It works! {{ title }}
+</p>
+<button (click)="setLanguage('fr')" i18n="button select fr">Set french language</button>
+<br/>
+<button (click)="setLanguage('de')" i18n="button select de">Set german language</button>
+
+<nav>
+  <a routerLink="/lazy">Load lazy loaded module</a>
+</nav>
+
+<router-outlet></router-outlet>
