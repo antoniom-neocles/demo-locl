@@ -22,13 +22,8 @@
             "polyfills": "apps/demo/src/polyfills.ts",
             "tsConfig": "apps/demo/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/demo/src/favicon.ico",
-              "apps/demo/src/assets"
-            ],
-            "styles": [
-              "apps/demo/src/styles.scss"
-            ],
+            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
+            "styles": ["apps/demo/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -67,7 +62,8 @@
           "lazyModules": ["src/app/app.module"],
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo:build"
+            "browserTarget": "demo:build",
+            "proxyConfig": "apps/demo/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -97,6 +93,60 @@
             "jestConfig": "apps/demo/jest.config.js",
             "tsConfig": "apps/demo/tsconfig.spec.json",
             "setupFile": "apps/demo/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "api-lokalise": {
+      "root": "apps/api-lokalise",
+      "sourceRoot": "apps/api-lokalise/src",
+      "projectType": "application",
+      "prefix": "api-lokalise",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/api-lokalise",
+            "main": "apps/api-lokalise/src/main.ts",
+            "tsConfig": "apps/api-lokalise/tsconfig.app.json",
+            "assets": ["apps/api-lokalise/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-lokalise/src/environments/environment.ts",
+                  "with": "apps/api-lokalise/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-lokalise:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/api-lokalise/tsconfig.app.json",
+              "apps/api-lokalise/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/api-lokalise/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/api-lokalise/jest.config.js",
+            "tsConfig": "apps/api-lokalise/tsconfig.spec.json"
           }
         }
       }
