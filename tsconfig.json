@@ -35,7 +35,7 @@
       ],
       "@locl/cli": [
         "libs/cli/src/index.ts"
-      ],
+      ]
     }
   },
   "exclude": [

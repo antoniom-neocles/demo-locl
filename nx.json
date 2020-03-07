@@ -1,5 +1,5 @@
 {
-  "npmScope": "locl",
+  "npmScope": "demo",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -8,24 +8,6 @@
     "nx.json": "*"
   },
   "projects": {
-    "core": {
-      "tags": ["core"]
-    },
-    "common": {
-      "tags": ["common"]
-    },
-    "utils": {
-      "tags": ["utils"]
-    },
-    "cli": {
-      "tags": ["cli"]
-    },
-    "app": {
-      "tags": ["app:web", "app:electron"]
-    },
-    "demo-e2e": {
-      "tags": []
-    },
     "demo": {
       "tags": []
     }

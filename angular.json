@@ -1,204 +1,6 @@
 {
   "version": 1,
   "projects": {
-    "core": {
-      "projectType": "library",
-      "root": "libs/core",
-      "sourceRoot": "libs/core/src",
-      "prefix": "locl",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/core/tsconfig.lib.json",
-            "project": "libs/core/ng-package.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/core/tsconfig.lib.json",
-              "libs/core/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/core/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/core/jest.config.js",
-            "tsConfig": "libs/core/tsconfig.spec.json",
-            "setupFile": "libs/core/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "utils": {
-      "projectType": "library",
-      "root": "libs/utils",
-      "sourceRoot": "libs/utils/src",
-      "prefix": "locl",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/utils/tsconfig.lib.json",
-            "project": "libs/utils/ng-package.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/utils/tsconfig.lib.json",
-              "libs/utils/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/utils/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/utils/jest.config.js",
-            "tsConfig": "libs/utils/tsconfig.spec.json",
-            "setupFile": "libs/utils/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "common": {
-      "projectType": "library",
-      "root": "libs/common",
-      "sourceRoot": "libs/common/src",
-      "prefix": "locl",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/common/tsconfig.lib.json",
-            "project": "libs/common/ng-package.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/common/tsconfig.lib.json",
-              "libs/common/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/common/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/common/jest.config.js",
-            "tsConfig": "libs/common/tsconfig.spec.json",
-            "setupFile": "libs/common/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "cli": {
-      "projectType": "library",
-      "root": "libs/cli",
-      "sourceRoot": "libs/cli/src",
-      "prefix": "locl",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/cli/tsconfig.lib.json",
-            "project": "libs/cli/ng-package.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/cli/tsconfig.lib.json",
-              "libs/cli/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/cli/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/cli/jest.config.js",
-            "tsConfig": "libs/cli/tsconfig.spec.json",
-            "setupFile": "libs/cli/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "app": {
-      "projectType": "library",
-      "root": "libs/app",
-      "sourceRoot": "libs/app/src",
-      "prefix": "locl",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/app/tsconfig.lib.json",
-              "libs/app/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/app/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/app/jest.config.js",
-            "tsConfig": "libs/app/tsconfig.spec.json",
-            "setupFile": "libs/app/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "demo": {
       "projectType": "application",
       "schematics": {
@@ -211,9 +13,7 @@
       "prefix": "locl",
       "architect": {
         "build": {
-          "lazyModules": [
-            "src/app/app.module"
-          ],
+          "lazyModules": ["src/app/app.module"],
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/demo",
@@ -264,9 +64,7 @@
           }
         },
         "serve": {
-          "lazyModules": [
-            "src/app/app.module"
-          ],
+          "lazyModules": ["src/app/app.module"],
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "demo:build"
@@ -290,10 +88,7 @@
               "apps/demo/tsconfig.app.json",
               "apps/demo/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/demo/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/demo/**"]
           }
         },
         "test": {
@@ -305,42 +100,10 @@
           }
         }
       }
-    },
-    "demo-e2e": {
-      "root": "apps/demo-e2e",
-      "sourceRoot": "apps/demo-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/demo-e2e/cypress.json",
-            "tsConfig": "apps/demo-e2e/tsconfig.e2e.json",
-            "devServerTarget": "demo:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "demo:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/demo-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/demo-e2e/**"
-            ]
-          }
-        }
-      }
     }
   },
   "cli": {
-    "defaultCollection": "@nstudio/xplat"
+    "defaultCollection": "@nrwl/schematics"
   },
   "schematics": {
     "@nrwl/angular:application": {
@@ -355,5 +118,6 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "demo"
+  "defaultProject": "demo",
+  "newProjectRoot": ""
 }
