@@ -1,13 +1,11 @@
-<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en" trgLang="en">
-  <file>
-    <unit id="Lazy loading works">
-      <notes>
-        <note category="description">Test string used for translating the lazy loaded module</note>
-        <note category="meaning">lazy-loaded</note>
-      </notes>
-      <segment>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="Lazy loading works" datatype="html">
         <source>Lazy loading works</source>
-      </segment>
-    </unit>
+        <note priority="1" from="description">Test string used for translating the lazy loaded module</note>
+        <note priority="1" from="meaning">lazy-loaded</note>
+      </trans-unit>
+    </body>
   </file>
 </xliff>

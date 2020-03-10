@@ -1,50 +1,32 @@
-<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en" trgLang="en">
-  <file>
-    <unit id="site header">
-      <notes>
-        <note category="description">Text for the site header</note>
-        <note category="meaning">app</note>
-      </notes>
-      <segment>
-        <source> It works! <ph id="1" equiv="INTERPOLATION"/>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="site header" datatype="html">
+        <source> It works! <x id="INTERPOLATION"/>
 </source>
-      </segment>
-    </unit>
-    <unit id="button select fr">
-      <notes>
-        <note category="description">Button text for setting france language</note>
-        <note category="meaning">app</note>
-      </notes>
-      <segment>
+        <note priority="1" from="description">Text for the site header</note>
+        <note priority="1" from="meaning">app</note>
+      </trans-unit>
+      <trans-unit id="button select fr" datatype="html">
         <source>Set french language</source>
-      </segment>
-    </unit>
-    <unit id="button select de">
-      <notes>
-        <note category="description">Button text for setting german language</note>
-        <note category="meaning">app</note>
-      </notes>
-      <segment>
+        <note priority="1" from="description">Button text for setting france language</note>
+        <note priority="1" from="meaning">app</note>
+      </trans-unit>
+      <trans-unit id="button select de" datatype="html">
         <source>Set german language</source>
-      </segment>
-    </unit>
-    <unit id="link Lazy Loaded">
-      <notes>
-        <note category="description">Text for link of lazy loaded module</note>
-        <note category="meaning">app</note>
-      </notes>
-      <segment>
+        <note priority="1" from="description">Button text for setting german language</note>
+        <note priority="1" from="meaning">app</note>
+      </trans-unit>
+      <trans-unit id="link Lazy Loaded" datatype="html">
         <source>Load lazy loaded module</source>
-      </segment>
-    </unit>
-    <unit id="welcome-msg">
-      <notes>
-        <note category="description">Title text for the application</note>
-        <note category="meaning">app</note>
-      </notes>
-      <segment>
-        <source>It works! Welcome to the demo of <ph id="1" equiv="PH"/> and <ph id="2" equiv="PH_1"/> made for <ph id="3" equiv="PH_2"/>!</source>
-      </segment>
-    </unit>
+        <note priority="1" from="description">Text for link of lazy loaded module</note>
+        <note priority="1" from="meaning">app</note>
+      </trans-unit>
+      <trans-unit id="welcome-msg" datatype="html">
+        <source>It works! Welcome to the demo of <x id="PH"/> and <x id="PH_1"/> made for <x id="PH_2"/>!</source>
+        <note priority="1" from="description">Title text for the application</note>
+        <note priority="1" from="meaning">app</note>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
