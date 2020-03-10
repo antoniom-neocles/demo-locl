@@ -9,7 +9,7 @@ const lib = 'Locl';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = $localize`Welcome to the demo of ${name} and ${lib} made for ${name}!`;
+  title = $localize`app|Title text for the application@@Welcome to the demo of ${name} and ${lib} made for ${name}!`;
 
   constructor() {
     console.log($localize`:@@foo:custom id!`);
