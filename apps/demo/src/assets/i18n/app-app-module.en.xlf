@@ -37,14 +37,13 @@
         <source>Load lazy loaded module</source>
       </segment>
     </unit>
-    <unit id="342498604306443707">
+    <unit id="welcome-msg">
+      <notes>
+        <note category="description">Title text for the application</note>
+        <note category="meaning">app</note>
+      </notes>
       <segment>
-        <source>app|Title text for the application@@Welcome to the demo of <ph id="1" equiv="PH"/> and <ph id="2" equiv="PH_1"/> made for <ph id="3" equiv="PH_2"/>!</source>
-      </segment>
-    </unit>
-    <unit id="foo">
-      <segment>
-        <source>custom id!</source>
+        <source>It works! Welcome to the demo of <ph id="1" equiv="PH"/> and <ph id="2" equiv="PH_1"/> made for <ph id="3" equiv="PH_2"/>!</source>
       </segment>
     </unit>
   </file>

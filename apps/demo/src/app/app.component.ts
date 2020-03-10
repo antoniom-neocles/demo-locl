@@ -9,11 +9,7 @@ const lib = 'Locl';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = $localize`app|Title text for the application@@Welcome to the demo of ${name} and ${lib} made for ${name}!`;
-
-  constructor() {
-    console.log($localize`:@@foo:custom id!`);
-  }
+  title = $localize`:app|Title text for the application@@welcome-msg:It works! Welcome to the demo of ${name} and ${lib} made for ${name}!`;
 
   public setLanguage (language: string) {
     localStorage.setItem('language', language);
