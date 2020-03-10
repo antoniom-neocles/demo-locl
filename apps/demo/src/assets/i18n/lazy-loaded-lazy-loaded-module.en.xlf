@@ -1,10 +1,12 @@
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext">
-    <body>
-      <trans-unit id="3124453948823168029" datatype="html">
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en" trgLang="en">
+  <file>
+    <unit id="3124453948823168029">
+      <notes>
+        <note category="description">test</note>
+      </notes>
+      <segment>
         <source>Lazy loading works</source>
-        <note priority="1" from="description">test</note>
-      </trans-unit>
-    </body>
+      </segment>
+    </unit>
   </file>
 </xliff>

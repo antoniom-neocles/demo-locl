@@ -13,7 +13,7 @@ if (environment.production) {
 }
 
 export const setApplicationLanguage = (language: string) =>
-  getTranslations(`/assets/i18n/app-app-module.${language}.json`).then(
+  getTranslations(`http://localhost:3333/api/${language}/files/app-app-module/download`).then(
     (data: ParsedTranslationBundle) => {
       loadTranslations(data.translations);
       import('./app/app.module').then(module => {
@@ -27,6 +27,6 @@ export const setApplicationLanguage = (language: string) =>
 
   let currentLanguage = localStorage.getItem('language');
   if(currentLanguage === null) {
-    currentLanguage = 'en-US';
+    currentLanguage = 'en';
   }
   setApplicationLanguage(currentLanguage);

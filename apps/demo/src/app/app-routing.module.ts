@@ -6,11 +6,12 @@ import { getTranslations, ParsedTranslationBundle } from '@locl/core';
 
 const currentLanguage = localStorage.getItem('language');
 
+///assets/i18n/lazy-loaded-lazy-loaded-module.${currentLanguage}.json
 const routes: Routes = [
   {
     path: 'lazy',
     loadChildren: () =>
-      getTranslations(`/assets/i18n/lazy-loaded-lazy-loaded-module.${currentLanguage}.json`).then(
+      getTranslations(`http://localhost:3333/api/${currentLanguage}/files/lazy-loaded-lazy-loaded-module/download`).then(
         (data: ParsedTranslationBundle) => {
           loadTranslations(data.translations);
           return import('./lazy-loaded/lazy-loaded.module').then(

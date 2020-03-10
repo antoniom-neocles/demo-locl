@@ -1,26 +1,40 @@
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext">
-    <body>
-      <trans-unit id="143924624516046945" datatype="html">
-        <source> It works! <x id="INTERPOLATION"/>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en" trgLang="en">
+  <file>
+    <unit id="143924624516046945">
+      <notes>
+        <note category="description">An introduction header for this sample</note>
+        <note category="meaning">site header</note>
+      </notes>
+      <segment>
+        <source> It works! <ph id="1" equiv="INTERPOLATION"/>
 </source>
-        <note priority="1" from="description">An introduction header for this sample</note>
-        <note priority="1" from="meaning">site header</note>
-      </trans-unit>
-      <trans-unit id="8296274834310951488" datatype="html">
+      </segment>
+    </unit>
+    <unit id="8296274834310951488">
+      <notes>
+        <note category="description">button select fr</note>
+      </notes>
+      <segment>
         <source>Set french language</source>
-        <note priority="1" from="description">button select fr</note>
-      </trans-unit>
-      <trans-unit id="8646416933815067002" datatype="html">
+      </segment>
+    </unit>
+    <unit id="8646416933815067002">
+      <notes>
+        <note category="description">button select de</note>
+      </notes>
+      <segment>
         <source>Set german language</source>
-        <note priority="1" from="description">button select de</note>
-      </trans-unit>
-      <trans-unit id="6586379816467235622" datatype="html">
-        <source>Welcome to the demo of <x id="PH"/> and <x id="PH_1"/> made for <x id="PH_2"/>!</source>
-      </trans-unit>
-      <trans-unit id="foo" datatype="html">
+      </segment>
+    </unit>
+    <unit id="6586379816467235622">
+      <segment>
+        <source>Welcome to the demo of <ph id="1" equiv="PH"/> and <ph id="2" equiv="PH_1"/> made for <ph id="3" equiv="PH_2"/>!</source>
+      </segment>
+    </unit>
+    <unit id="foo">
+      <segment>
         <source>custom id!</source>
-      </trans-unit>
-    </body>
+      </segment>
+    </unit>
   </file>
 </xliff>
