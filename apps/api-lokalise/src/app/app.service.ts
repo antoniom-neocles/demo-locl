@@ -38,7 +38,12 @@ export class AppService {
       .file(`${language}/${filename}.${language}.json`)
       .async('string')
       .then(data => {
-        return {locale: language, translations: JSON.parse(data)};
+        // remove the following line of code when you'll figure out 
+        // the issue which causes the wrong interpretation of the generic 
+        // translations tokens from xlf1.2 to json performed by lokalise api.
+        const newData = data.replace(/<x id=\\"([a-zA-Z0-9_-]*)\\"\\\/>/g, `{$)$1}`).replace(/\$\)/g, '$');
+
+        return {locale: language, translations: JSON.parse(newData)};
       });
   }
 
