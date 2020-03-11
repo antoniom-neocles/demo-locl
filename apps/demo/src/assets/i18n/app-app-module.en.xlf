@@ -11,6 +11,15 @@
         <note priority="1" from="description">Button text for setting german language</note>
         <note priority="1" from="meaning">app</note>
       </trans-unit>
+      <trans-unit id="2225536492769270099" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {no items.} =1 {1 single item} other {{INTERPOLATION} items.}}</source>
+      </trans-unit>
+      <trans-unit id="label with plural" datatype="html">
+        <source> We have <x id="ICU"/>
+</source>
+        <note priority="1" from="description">Label with plural</note>
+        <note priority="1" from="meaning">app</note>
+      </trans-unit>
       <trans-unit id="label testing" datatype="html">
         <source>Label for testing the translations</source>
         <note priority="1" from="description">Label for testing</note>
