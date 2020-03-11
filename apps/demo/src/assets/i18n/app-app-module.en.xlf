@@ -1,12 +1,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" target-language='en'>
+  <file source-language="en" datatype="plaintext">
     <body>
-      <trans-unit id="site header" datatype="html">
-        <source> It works! <x id="INTERPOLATION"/>
-</source>
-        <note priority="1" from="description">Text for the site header</note>
-        <note priority="1" from="meaning">app</note>
-      </trans-unit>
       <trans-unit id="button select fr" datatype="html">
         <source>Set french language</source>
         <note priority="1" from="description">Button text for setting france language</note>
@@ -15,6 +9,11 @@
       <trans-unit id="button select de" datatype="html">
         <source>Set german language</source>
         <note priority="1" from="description">Button text for setting german language</note>
+        <note priority="1" from="meaning">app</note>
+      </trans-unit>
+      <trans-unit id="label testing" datatype="html">
+        <source>Label for testing the translations</source>
+        <note priority="1" from="description">Label for testing</note>
         <note priority="1" from="meaning">app</note>
       </trans-unit>
       <trans-unit id="link Lazy Loaded" datatype="html">
